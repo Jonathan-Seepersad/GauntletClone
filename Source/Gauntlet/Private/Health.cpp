@@ -38,3 +38,9 @@ void UHealth::Heal(float HealAmount)
 	CurrentHealth += HealAmount;
 	if (CurrentHealth > MaxHealth) CurrentHealth = MaxHealth;
 }
+
+bool UHealth::IsAlive() const
+{
+	return CurrentHealth > 0;
+}
+

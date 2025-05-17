@@ -23,7 +23,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float MaxHealth = 1000;
-	
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	float CurrentHealth;
 
@@ -35,7 +35,10 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void Heal(float HealAmount);
-	
+
+	UFUNCTION(BlueprintPure, BlueprintCallable)
+	bool IsAlive() const;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
